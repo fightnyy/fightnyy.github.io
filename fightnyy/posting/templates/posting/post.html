@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url 'create'%}" class="add_New_Post">새로운 글 작성하기</a>
+    <div class="pPost">
+        {%for blog in blogs.all%}
+        <div class="container">
+            <h1>{{blog.title}}</h1>
+            <span>{{blog.pub_date}}</span>
+            <a href="{%url 'detail' blog.id%}">{{blog.summary}}......</a>
+        </div>
+        {%endfor%}
+    </div>
+{% endblock %}
