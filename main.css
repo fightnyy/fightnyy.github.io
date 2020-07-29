@@ -1,6 +1,5 @@
 body
 {
-    color:#34495e;
     background-color: #636e72;
     
 }
@@ -24,6 +23,13 @@ body
     font-size: 30px;
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item.nav-link:hover
+{
+    transform: scale(1.1);
+    transition: .7s;
+    
 }
 
 @keyframes fadeIn
