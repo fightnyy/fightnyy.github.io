@@ -4,7 +4,7 @@ const name=document.querySelector('.js-name');
 
 
 function paintBg(){
-    img.src="1.jpg"
+    img.src="static/6.jpg";
     img.classList.add("bgimage");
     body.prepend(img);
 }
