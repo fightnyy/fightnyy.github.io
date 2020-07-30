@@ -32,11 +32,59 @@ body
     
 }
 
+
+.container
+{
+    width: 300px;
+    height: 300px;
+
+}
+.container .box
+{
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+    animation: fun 1s linear alternate infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box::before
+{
+   content: "running";
+}
+
+.container .box:hover
+{
+    animation-play-state: paused;
+}
+
+.container .box:hover::before
+{
+    content: "paused";
+}
+
+@keyframes fun
+{
+    0%
+    {
+        width:50px;
+        height: 100px;
+        background-color: aqua;
+    }
+    100%{
+        width:150px;
+        height: 100px;
+        background-color: dodgerblue;
+    }
+}
 @keyframes fadeIn
 {
-    from{
+    0%
+    {
         opacity:0;
-    }to
+    }
+    100%
     {
         opacity: .9;
     }
